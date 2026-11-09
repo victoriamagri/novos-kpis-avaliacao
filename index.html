@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Novos KPIs — avaliação por conta e uso da ferramenta</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--tx:#1d2330;--mut:#6b7385;--ln:#e3e6ec;--ok:#1f8a4c;--okb:#e5f5ec;--bad:#c0392b;--badb:#fbe9e7;--warn:#9a6700;--warnb:#fff4d6;--acc:#2f5bd3}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);padding:28px}
+  h1{font-size:20px;margin:0 0 4px}
+  .sub{color:var(--mut);margin:0 0 22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:24px}
+  .tile{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:12px 14px}
+  .tile .l{color:var(--mut);font-size:12px}
+  .tile .v{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
+  .tile .m{font-size:12px;color:var(--mut)}
+  section{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:16px 18px;margin-bottom:18px}
+  h2{font-size:15px;margin:0 0 4px}
+  .src{color:var(--mut);font-size:12px;margin:0 0 12px}
+  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  th,td{padding:7px 8px;border-bottom:1px solid var(--ln);text-align:right;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left;white-space:normal}
+  th{font-size:12px;color:var(--mut);font-weight:500}
+  td.id{color:var(--mut);font-size:12px;text-align:left}
+  .ok{background:var(--okb);color:var(--ok);font-weight:600}
+  .bad{background:var(--badb);color:var(--bad);font-weight:600}
+  .na{color:var(--mut)}
+  .tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:999px;background:#eef2fd;color:var(--acc);margin-left:6px}
+  .alert{background:var(--warnb);border:1px solid #f0d58a;border-radius:10px;padding:12px 16px}
+  .alert h2{color:var(--warn)}
+  .alert li{margin:4px 0}
+  footer{color:var(--mut);font-size:12px;margin-top:8px}
+</style>
+</head>
+<body>
+<h1>Novos KPIs na página unificada</h1>
+<p class="sub">Notas do Airbnb por conta (setor 10) e uso da ferramenta de avaliação pelas franquias (setor 15) · cadastrados em 04/11/2026 · foto do kpi-system em 09/11/2026</p>
+
+<div class="grid">
+  <div class="tile"><div class="l">Checkouts franquias (06/11)</div><div class="v">324</div><div class="m">meta 800</div></div>
+  <div class="tile"><div class="l">Pedidos de avaliação Host (06/11)</div><div class="v">33</div><div class="m">meta 500</div></div>
+  <div class="tile"><div class="l">% pedidos / checkouts (06/11)</div><div class="v">10,19%</div><div class="m">meta 60</div></div>
+  <div class="tile"><div class="l">Nota trimestre · conta 1 / 3</div><div class="v">4,78 · 4,46</div><div class="m">meta 4,80</div></div>
+  <div class="tile"><div class="l">Nota 7 dias · conta 2</div><div class="v">4,66</div><div class="m">meta 4,80</div></div>
+  <div class="tile"><div class="l">Nota Booking anual (06/11)</div><div class="v">4,78</div><div class="m">meta 4,50</div></div>
+</div>
+
+<section>
+  <h2>Uso da ferramenta de avaliação <span class="tag">setor 15 · Backoffice - Comentários</span></h2>
+  <p class="src">Sapron · checkouts de D−10 · pedido = <code>review_requested_at</code> preenchido · skill /notas-avaliacao</p>
+  <table>
+    <tr><th>KPI</th><th>ID</th><th>Meta</th><th>04/11</th><th>05/11</th><th>06/11</th></tr>
+    <tr><td>Nº checkouts franquias</td><td class="id">3037 · KPI2898</td><td>800</td><td class="bad">718</td><td class="bad">556</td><td class="bad">324</td></tr>
+    <tr><td>Nº pedidos de avaliação pelo Host</td><td class="id">3038 · KPI2899</td><td>500</td><td class="bad">45</td><td class="bad">48</td><td class="bad">33</td></tr>
+    <tr><td>% Checkouts/pedidos</td><td class="id">3039 · KPI2900</td><td>60</td><td class="bad">6,27%</td><td class="bad">8,63 ⚠</td><td class="bad">10,19%</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Notas de avaliação <span class="tag">setor 10 · Franquias - Qualidade e Fiscalização</span></h2>
+  <p class="src">Nekt · conta do imóvel pelo <code>owner_id</code> de hoje · conta sem avaliação = não lança · notas cortadas em 2 casas</p>
+  <table>
+    <tr><th>KPI</th><th>ID</th><th>Meta</th><th>04/11</th><th>05/11</th><th>06/11</th></tr>
+    <tr><td>Nota trimestre Airbnb conta 1</td><td class="id">3040 · KPI2901</td><td>4,80</td><td class="ok">4,82</td><td class="ok">4,82</td><td class="bad">4,78</td></tr>
+    <tr><td>Nota Airbnb últimos 7 dias conta 1</td><td class="id">3041 · KPI2902</td><td>4,80</td><td class="na">sem avaliações</td><td class="na">–</td><td class="na">–</td></tr>
+    <tr><td>Nota trimestre Airbnb conta 2</td><td class="id">3042 · KPI2903</td><td>4,80</td><td class="na">sem avaliações</td><td class="na">–</td><td class="na">–</td></tr>
+    <tr><td>Nota Airbnb últimos 7 dias conta 2</td><td class="id">3043 · KPI2904</td><td>4,80</td><td class="bad">4,66</td><td class="bad">4,66</td><td class="bad">4,66</td></tr>
+    <tr><td>Nota trimestre Airbnb conta 3</td><td class="id">3044 · KPI2905</td><td>4,80</td><td class="bad">4,46</td><td class="bad">4,46</td><td class="bad">4,46</td></tr>
+    <tr><td>Nota Airbnb últimos 7 dias conta 3</td><td class="id">3045 · KPI2906</td><td>4,80</td><td class="na">sem avaliações</td><td class="na">–</td><td class="na">–</td></tr>
+    <tr><td>Nota Booking anual <span class="tag">já existia</span></td><td class="id">2230 · KPI2406</td><td>4,50</td><td class="ok">4,78</td><td class="ok">4,78</td><td class="ok">4,78</td></tr>
+  </table>
+</section>
+
+<div class="alert">
+  <h2>Pontos para conferir</h2>
+  <ul>
+    <li><b>Conta 2:</b> o trimestre está "sem avaliações", mas a nota dos últimos 7 dias tem 4,66. Se houve avaliação na semana, o trimestre também precisa ter. Parece que algum valor foi gravado no KPI errado.</li>
+    <li><b>Conta 1, trimestre (3040):</b> os valores de 04 a 06/11 (4,82 · 4,82 · 4,78) são idênticos aos da nota <i>geral</i> dos 7 dias (550) nesses dias. Vale conferir se não foi gravado o número geral.</li>
+    <li><b>3039 em 05/11:</b> gravado "8,63", sem o "%".</li>
+    <li><b>3039, meta "60":</b> está sem "%", e o nome diz checkouts/pedidos, mas a conta é pedidos ÷ checkouts.</li>
+    <li><b>3037:</b> o nome diz "no mês", mas a skill lança os checkouts de D−10 (um dia). Nome e meta (800) não batem com a regra.</li>
+    <li><b>2230:</b> no kpi-system o nome é só "Nota Booking", sem "anual".</li>
+    <li>07 e 08/11 caíram no fim de semana, e hoje (09/11) ainda não tem nada lançado.</li>
+  </ul>
+</div>
+
+<footer>Verde = bate a meta · vermelho = abaixo da meta (todos "Maior Verde"). Fonte: kpi-system.seazone.dev, endpoint /api/setores/{10,15}/valores.</footer>
+</body>
+</html>
